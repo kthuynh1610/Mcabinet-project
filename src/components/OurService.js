@@ -10,6 +10,12 @@ import service4 from '../assets/service4.jpg';
 
 const SectionContainer = styled(Box)(({ theme }) => ({
   padding: theme.spacing(8, 0),
+  [theme.breakpoints.down('md')]: {
+    padding: theme.spacing(6, 0),
+  },
+  [theme.breakpoints.down('sm')]: {
+    padding: theme.spacing(4, 0),
+  },
 }));
 
 const ServiceCard = styled(Card)(({ theme }) => ({
@@ -88,13 +94,13 @@ function OurService() {
   return (
     <SectionContainer>
       <Container maxWidth="lg">
-        <Grid container spacing={2} mb={8}>
-          <Grid item xs={10} sm={5}>
+        <Grid container spacing={4} mb={{ xs: 4, md: 8 }}>
+          <Grid item xs={12} md={5}>
             <Typography variant="h2" sx={{ color: 'primary.main', mb: 1 }}>
               Our Service
             </Typography>
           </Grid>
-          <Grid  item xs={10} sm={7}>
+          <Grid item xs={12} md={7}>
             <Typography variant="body1" sx={{ mb: 2, fontSize: '1.05rem', lineHeight: 1.8, color:'primary.main' }}>
               M Cabinet Design work with high-end builders has earned us a reputation for excellence and distinctive custom designed and made cabinetry.
             </Typography>
@@ -104,9 +110,9 @@ function OurService() {
           </Grid>
         </Grid>
         <Box>
-          <Grid container spacing={8}>
+          <Grid container spacing={{ xs: 3, sm: 4, md: 4 }}>
             {services.map((service, idx) => (
-              <Grid item xs={10} sm={4} md={3} key={idx}>
+              <Grid item xs={12} sm={6} md={3} key={idx}>
                 <ServiceCard>
                   <CardImage imageUrl={service.image} />
                   <CardBottomSection>

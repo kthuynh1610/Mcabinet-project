@@ -8,6 +8,12 @@ const HeroContainer = styled(Box)(({ theme }) => ({
   width: '100%',
   overflow: 'hidden',
   backgroundColor: 'transparent',
+  [theme.breakpoints.down('md')]: {
+    minHeight: '600px',
+  },
+  [theme.breakpoints.down('sm')]: {
+    minHeight: '500px',
+  },
 }));
 
 const ImageBackground = styled(Box)(({ theme, imageUrl }) => ({
@@ -22,7 +28,11 @@ const ImageBackground = styled(Box)(({ theme, imageUrl }) => ({
   backgroundRepeat: 'no-repeat',
   zIndex: 2,
   [theme.breakpoints.down('md')]: {
-    display: 'none',
+    height: '600px',
+    backgroundPosition: 'center center',
+  },
+  [theme.breakpoints.down('sm')]: {
+    height: '500px',
   },
 }));
 
@@ -40,6 +50,13 @@ const TextOverlay = styled(Box)(({ theme, imageUrl }) => ({
   minHeight: '800px',
   [theme.breakpoints.down('md')]: {
     width: '100%',
+    padding: theme.spacing(6, 4),
+    minHeight: '600px',
+    backgroundColor: 'rgba(53, 23, 13, 0.7)', // Add overlay for mobile readability
+  },
+  [theme.breakpoints.down('sm')]: {
+    padding: theme.spacing(4, 3),
+    minHeight: '500px',
   },
 }));
 

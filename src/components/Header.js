@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { AppBar, Toolbar, Typography, Box, Button } from '@mui/material';
+import { AppBar, Toolbar, Typography, Box, Button, IconButton, Drawer, List, ListItem, ListItemText, useMediaQuery, useTheme } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import { styled } from '@mui/material/styles';
 import logo from '../assets/Mcabinet.png'
 const StyledAppBar = styled(AppBar)(({ theme, isOverHero }) => ({
@@ -42,6 +44,13 @@ const NavButton = styled(Button)(({ theme }) => ({
 
 function Header() {
   const [isOverHero, setIsOverHero] = useState(true);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -69,6 +78,8 @@ function Header() {
   }, []);
 
   const scrollToSection = (sectionId) => {
+    setMobileOpen(false); // Close mobile menu when navigating
+    
     if (sectionId === 'top') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (sectionId === 'contact') {
@@ -107,22 +118,92 @@ function Header() {
     scrollToSection('top');
   };
 
+  const menuItems = [
+    { label: 'HOME', onClick: () => scrollToSection('top') },
+    { label: 'ABOUT US', onClick: () => scrollToSection('our-background') },
+    { label: 'SERVICES', onClick: () => {} },
+    { label: 'BLOG', onClick: () => {} },
+    { label: 'CONTACT', onClick: () => scrollToSection('contact') },
+  ];
+
   return (
-    <StyledAppBar isOverHero={isOverHero}>
-      <Toolbar sx={{ justifyContent: 'space-between', py: 2.5, minHeight: '100px !important' }}>
-        <LogoContainer onClick={handleLogoClick} sx={{ cursor: 'pointer', ml:'20px' }}>
-          <img src={logo} style={{height:'50px'}}/>
+    <>
+      <StyledAppBar isOverHero={isOverHero}>
+        <Toolbar sx={{ justifyContent: 'space-between', py: 2.5, minHeight: { xs: '70px', md: '100px' }, px: { xs: 2, md: 3 } }}>
+          <LogoContainer onClick={handleLogoClick} sx={{ cursor: 'pointer', ml: { xs: 0, md: '20px' } }}>
+            <img src={logo} style={{ height: isMobile ? '40px' : '50px' }} alt="M Cabinet Logo" />
+          </LogoContainer>
           
-        </LogoContainer>
-        <Box sx={{ display: 'flex', gap: 6, justifyContent: 'center', alignItems: 'center' }}>
-          <NavButton onClick={() => scrollToSection('top')}>HOME</NavButton>
-          <NavButton onClick={() => scrollToSection('our-background')}>ABOUT US</NavButton>
-          <NavButton>SERVICES</NavButton>
-          <NavButton>BLOG</NavButton>
-          <NavButton onClick={() => scrollToSection('contact')}>CONTACT</NavButton>
+          {/* Desktop Navigation */}
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 6, justifyContent: 'center', alignItems: 'center' }}>
+            {menuItems.map((item, index) => (
+              <NavButton key={index} onClick={item.onClick}>
+                {item.label}
+              </NavButton>
+            ))}
+          </Box>
+
+          {/* Mobile Menu Icon */}
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="end"
+            onClick={handleDrawerToggle}
+            sx={{ display: { md: 'none' } }}
+          >
+            <MenuIcon />
+          </IconButton>
+        </Toolbar>
+      </StyledAppBar>
+
+      {/* Mobile Drawer */}
+      <Drawer
+        anchor="right"
+        open={mobileOpen}
+        onClose={handleDrawerToggle}
+        sx={{
+          display: { xs: 'block', md: 'none' },
+          '& .MuiDrawer-paper': {
+            width: '70%',
+            maxWidth: '300px',
+            backgroundColor: 'primary.main',
+          },
+        }}
+      >
+        <Box sx={{ p: 2, display: 'flex', justifyContent: 'flex-end' }}>
+          <IconButton onClick={handleDrawerToggle} sx={{ color: '#ffffff' }}>
+            <CloseIcon />
+          </IconButton>
         </Box>
-      </Toolbar>
-    </StyledAppBar>
+        <List>
+          {menuItems.map((item, index) => (
+            <ListItem
+              button
+              key={index}
+              onClick={item.onClick}
+              sx={{
+                py: 2,
+                '&:hover': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                },
+              }}
+            >
+              <ListItemText
+                primary={item.label}
+                sx={{
+                  color: '#ffffff',
+                  textAlign: 'center',
+                  '& .MuiTypography-root': {
+                    fontWeight: 600,
+                    fontSize: '1.1rem',
+                  },
+                }}
+              />
+            </ListItem>
+          ))}
+        </List>
+      </Drawer>
+    </>
   );
 }
 

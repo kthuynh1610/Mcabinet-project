@@ -9,6 +9,12 @@ import background4 from '../assets/background4.jpg';
 const SectionContainer = styled(Box)(({ theme }) => ({
   backgroundColor: '#fef6e3',
   padding: theme.spacing(8, 0),
+  [theme.breakpoints.down('md')]: {
+    padding: theme.spacing(6, 0),
+  },
+  [theme.breakpoints.down('sm')]: {
+    padding: theme.spacing(4, 0),
+  },
 }));
 
 const ImageGridContainer = styled(Box)(({ theme }) => ({
@@ -19,6 +25,16 @@ const ImageGridContainer = styled(Box)(({ theme }) => ({
   gridTemplateColumns: 'repeat(10, 1fr)',
   gridTemplateRows: 'repeat(10, 1fr)',
   gap: theme.spacing(2),
+  [theme.breakpoints.down('md')]: {
+    height: '500px',
+    gap: theme.spacing(1.5),
+  },
+  [theme.breakpoints.down('sm')]: {
+    height: 'auto',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: theme.spacing(2),
+  },
 }));
 
 const BackgroundImage = styled(Box)(({ theme, imageUrl }) => ({
@@ -27,6 +43,10 @@ const BackgroundImage = styled(Box)(({ theme, imageUrl }) => ({
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
   borderRadius: '4px',
+  [theme.breakpoints.down('sm')]: {
+    width: '100%',
+    height: '200px',
+  },
 }));
 
 // Top-left image (small vertical)
@@ -71,7 +91,7 @@ function OurBackground() {
     <SectionContainer id="our-background">
       <Container maxWidth="lg">
         <Grid container spacing={4} alignItems="center">
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} order={{ xs: 2, md: 1 }}>
             <ImageGridContainer>
               <Image1 imageUrl={background1} />
               <Image2 imageUrl={background2} />
@@ -79,8 +99,15 @@ function OurBackground() {
               <Image4 imageUrl={background4} />
             </ImageGridContainer>
           </Grid>
-          <Grid item xs={12} md={6}>
-            <Typography variant="overline" sx={{ color: 'text.secondary', letterSpacing: '2px', fontSize:'1.25rem' }}>
+          <Grid item xs={12} md={6} order={{ xs: 1, md: 2 }}>
+            <Typography 
+              variant="overline" 
+              sx={{ 
+                color: 'text.secondary', 
+                letterSpacing: '2px', 
+                fontSize: { xs: '1rem', md: '1.25rem' }
+              }}
+            >
               M CABINET DESIGN
             </Typography>
             <Typography variant="h2" sx={{ color: 'primary.main', mb: 3, mt: 1 }}>
