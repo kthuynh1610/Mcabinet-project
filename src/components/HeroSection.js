@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Container, Typography, Button, Grid } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import header from '../assets/header.png';
+import header from '../assets/header.jpg';
 const HeroContainer = styled(Box)(({ theme }) => ({
   position: 'relative',
   minHeight: '800px',

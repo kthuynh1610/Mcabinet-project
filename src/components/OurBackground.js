@@ -1,6 +1,8 @@
 import React from 'react';
 import { Box, Container, Typography, Button, Grid } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import background1 from '../assets/background1.jpg';
 import background2 from '../assets/background2.jpg';
 import background3 from '../assets/background3.jpg';
@@ -37,12 +39,14 @@ const ImageGridContainer = styled(Box)(({ theme }) => ({
   },
 }));
 
-const BackgroundImage = styled(Box)(({ theme, imageUrl }) => ({
-  backgroundImage: `url(${imageUrl})`,
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  backgroundRepeat: 'no-repeat',
+const LazyBackgroundImage = styled(Box)(({ theme }) => ({
   borderRadius: '4px',
+  overflow: 'hidden',
+  '& img': {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+  },
   [theme.breakpoints.down('sm')]: {
     width: '100%',
     height: '200px',
@@ -50,25 +54,25 @@ const BackgroundImage = styled(Box)(({ theme, imageUrl }) => ({
 }));
 
 // Top-left image (small vertical)
-const Image1 = styled(BackgroundImage)({
+const Image1 = styled(LazyBackgroundImage)({
   gridColumn: '1 / 4',
   gridRow: '1 / 4',
 });
 
 // Top-right/Middle large image (horizontal)
-const Image2 = styled(BackgroundImage)({
+const Image2 = styled(LazyBackgroundImage)({
   gridColumn: '4 / 11',
   gridRow: '1 / 5',
 });
 
 // Bottom large image (horizontal)
-const Image3 = styled(BackgroundImage)({
+const Image3 = styled(LazyBackgroundImage)({
   gridColumn: '1 / 8',
   gridRow: '5 / 11',
 });
 
 // Bottom-right small image (vertical)
-const Image4 = styled(BackgroundImage)({
+const Image4 = styled(LazyBackgroundImage)({
   gridColumn: '8 / 11',
   gridRow: '5 / 11',
 });
@@ -93,10 +97,18 @@ function OurBackground() {
         <Grid container spacing={4} alignItems="center">
           <Grid item xs={12} md={6} order={{ xs: 2, md: 1 }}>
             <ImageGridContainer>
-              <Image1 imageUrl={background1} />
-              <Image2 imageUrl={background2} />
-              <Image3 imageUrl={background3} />
-              <Image4 imageUrl={background4} />
+              <Image1>
+                <LazyLoadImage src={background1} effect="blur" alt="Background 1" />
+              </Image1>
+              <Image2>
+                <LazyLoadImage src={background2} effect="blur" alt="Background 2" />
+              </Image2>
+              <Image3>
+                <LazyLoadImage src={background3} effect="blur" alt="Background 3" />
+              </Image3>
+              <Image4>
+                <LazyLoadImage src={background4} effect="blur" alt="Background 4" />
+              </Image4>
             </ImageGridContainer>
           </Grid>
           <Grid item xs={12} md={6} order={{ xs: 1, md: 2 }}>

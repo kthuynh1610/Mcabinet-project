@@ -5,7 +5,7 @@ import openingHour from '../assets/openingHour.jpg';
 
 const SectionContainer = styled(Box)(({ theme }) => ({
   position: 'relative',
-  minHeight: '700px',
+  minHeight: '800px',
   marginTop: theme.spacing(8),
   marginBottom: 0,
   overflow: 'hidden',
@@ -28,13 +28,14 @@ const BackgroundImage = styled(Box)(({ theme }) => ({
 const HoursCard = styled(Paper)(({ theme }) => ({
   position: 'absolute',
   top: '50%',
-  right: theme.spacing(4),
+  right: theme.spacing(10),
   transform: 'translateY(-50%)',
   zIndex: 1,
   backgroundColor: theme.palette.secondary.main,
   padding: theme.spacing(5),
-  width: '450px',
+  width: '550px',
   opacity: '90%',
+  height: '500px',
   borderRadius: '8px',
   [theme.breakpoints.down('md')]: {
     position: 'relative',
@@ -51,10 +52,9 @@ const ContactButton = styled(Button)(({ theme }) => ({
   color: theme.palette.secondary.main,
   padding: theme.spacing(1.5, 4),
   marginTop: theme.spacing(3),
-  textTransform: 'uppercase',
   fontWeight: 600,
-  borderRadius: 0,
-  width: '100%',
+  borderRadius: 10,
+  width: '200px',
   '&:hover': {
     backgroundColor: theme.palette.primary.dark,
   },
@@ -62,7 +62,7 @@ const ContactButton = styled(Button)(({ theme }) => ({
 
 const HoursItem = styled(Box)(({ theme }) => ({
   padding: theme.spacing(1.5, 0),
-  borderBottom: '1px solid rgba(0,0,0,0.1)',
+  borderBottom: '1px solid #35170d',
   '&:last-child': {
     borderBottom: 'none',
   },
@@ -73,32 +73,30 @@ function OpeningHours() {
     <SectionContainer id="contact">
       <BackgroundImage />
       <HoursCard id="hours-card">
-        <Typography variant="h4" sx={{ color: 'primary.main', mb: 1 }}>
+        <Typography variant="h1" sx={{ color: 'primary.main', mb: 1 }}>
           Opening Hours
         </Typography>
-        <Typography variant="subtitle1" sx={{ color: 'primary.main', mb: 3, fontWeight: 400 }}>
+        <HoursItem>
+        <Typography variant="h2" sx={{ color: 'primary.main', mb: 3, fontWeight: 400 }}>
           Come Visit
         </Typography>
-        <Box>
-          <HoursItem>
-            <Typography variant="body1" sx={{ color: 'primary.main', fontWeight: 500 }}>
+        </HoursItem>
+        <Box sx={{ mt: '10px', mb: '10px', pt: '10px' }}>
+            <Typography variant="h4" sx={{ color: 'primary.main', fontWeight: 500, margin:'10px 10px 15px 0px' }}>
               Mon - Fri: 9am - 6pm
             </Typography>
-          </HoursItem>
-          <HoursItem>
-            <Typography variant="body1" sx={{ color: 'primary.main', fontWeight: 500 }}>
+            <Typography variant="h4" sx={{ color: 'primary.main', fontWeight: 500, margin:'10px 10px 15px 0px' }}>
               Sat: 10am - 2pm
             </Typography>
-          </HoursItem>
-          <HoursItem>
-            <Typography variant="body1" sx={{ color: 'primary.main', fontWeight: 500 }}>
+            <Typography variant="h4" sx={{ color: 'primary.main', fontWeight: 500, margin:'10px 10px 15px 0px' }}>
               Sun: Closed
-            </Typography>
-          </HoursItem>
+            </Typography> 
         </Box>
-        <ContactButton variant="contained">
-          Contact Us
-        </ContactButton>
+        <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+          <ContactButton>
+            Contact Us
+          </ContactButton>
+        </Box> 
       </HoursCard>
     </SectionContainer>
   );

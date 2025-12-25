@@ -1,6 +1,8 @@
 import React from 'react';
 import { Box, Container, Typography, Grid, Card, CardContent, IconButton } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import service1 from '../assets/service1.jpg';
@@ -31,14 +33,15 @@ const ServiceCard = styled(Card)(({ theme }) => ({
   },
 }));
 
-const CardImage = styled(Box)(({ theme, imageUrl }) => ({
+const CardImage = styled(Box)(({ theme }) => ({
   width: '100%',
   height: '100%',
-  backgroundImage: `url(${imageUrl})`,
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  backgroundRepeat: 'no-repeat',
   position: 'relative',
+  '& img': {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+  },
 }));
 
 const CardBottomSection = styled(CardContent)(({ theme }) => ({
@@ -114,7 +117,14 @@ function OurService() {
             {services.map((service, idx) => (
               <Grid item xs={12} sm={6} md={3} key={idx}>
                 <ServiceCard>
-                  <CardImage imageUrl={service.image} />
+                  <CardImage>
+                    <LazyLoadImage 
+                      src={service.image} 
+                      effect="blur" 
+                      alt={service.title}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    />
+                  </CardImage>
                   <CardBottomSection>
                     <Typography variant="caption" sx={{ color: '#ffffff', fontWeight: 600, fontSize: '0.85rem', mb: 0.5 }}>
                       {service.number}
