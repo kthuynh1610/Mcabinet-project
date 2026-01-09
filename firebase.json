@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "mcabinet",
     "public": "build",
     "ignore": [
       "firebase.json",
