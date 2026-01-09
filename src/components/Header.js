@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, Box, Button, IconButton, Drawer, List, ListItem, ListItemText, useMediaQuery, useTheme } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { styled } from '@mui/material/styles';
 import logo from '../assets/Mcabinet.png'
-const StyledAppBar = styled(AppBar)(({ theme, isOverHero }) => ({
-  backgroundColor: isOverHero ? 'transparent' : theme.palette.primary.main,
+const StyledAppBar = styled(AppBar)(({ theme, isOverHero, isHomePage }) => ({
+  backgroundColor: (isHomePage && isOverHero) ? 'transparent' : theme.palette.primary.main,
   boxShadow: 'none',
   position: 'absolute',
   top: 0,
@@ -33,7 +34,7 @@ const LogoIcon = styled(Box)(({ theme, imageUrl }) => ({
 }));
 
 const NavButton = styled(Button)(({ theme }) => ({
-  color: '#ffffff',
+  color: theme.palette.secondary.main,
   textTransform: 'uppercase',
   fontWeight: 500,
   fontSize: '1rem',
@@ -47,12 +48,22 @@ function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
+  const isHomePage = location.pathname === '/';
+
   useEffect(() => {
+    // Only track scroll position on home page
+    if (!isHomePage) {
+      setIsOverHero(false);
+      return;
+    }
+
     const handleScroll = () => {
       const heroSection = document.getElementById('top');
       if (heroSection) {
@@ -75,7 +86,7 @@ function Header() {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleScroll);
     };
-  }, []);
+  }, [isHomePage]);
 
   const scrollToSection = (sectionId) => {
     setMobileOpen(false); // Close mobile menu when navigating
@@ -114,21 +125,46 @@ function Header() {
     }
   };
 
+  const handleNavigation = (path, sectionId = null) => {
+    setMobileOpen(false); // Close mobile menu when navigating
+    
+    if (path === '/') {
+      navigate(path);
+      // If on home page and has section ID, scroll after navigation
+      if (sectionId) {
+        setTimeout(() => scrollToSection(sectionId), 100);
+      }
+    } else {
+      navigate(path);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   const handleLogoClick = () => {
-    scrollToSection('top');
+    navigate('/');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const menuItems = [
-    { label: 'HOME', onClick: () => scrollToSection('top') },
-    { label: 'ABOUT US', onClick: () => scrollToSection('our-background') },
-    { label: 'SERVICES', onClick: () => {} },
-    { label: 'BLOG', onClick: () => {} },
-    { label: 'CONTACT', onClick: () => scrollToSection('contact') },
+    { label: 'HOME', onClick: () => handleNavigation('/') },
+    { label: 'PROJECTS', onClick: () => handleNavigation('/projects') },
+    { label: 'ABOUT US', onClick: () => handleNavigation('/about') },
+    { label: 'SERVICES', onClick: () => handleNavigation('/services') },
+    { 
+      label: 'CONTACT', 
+      onClick: () => {
+        if (location.pathname === '/') {
+          scrollToSection('contact');
+        } else {
+          handleNavigation('/', 'contact');
+        }
+      } 
+    },
   ];
 
   return (
     <>
-      <StyledAppBar isOverHero={isOverHero}>
+      <StyledAppBar isOverHero={isOverHero} isHomePage={isHomePage}>
         <Toolbar sx={{ justifyContent: 'space-between', py: 2.5, minHeight: { xs: '70px', md: '100px' }, px: { xs: 2, md: 3 } }}>
           <LogoContainer onClick={handleLogoClick} sx={{ cursor: 'pointer', ml: { xs: 0, md: '20px' } }}>
             <img src={logo} style={{ height: isMobile ? '40px' : '50px' }} alt="M Cabinet Logo" />
@@ -145,11 +181,10 @@ function Header() {
 
           {/* Mobile Menu Icon */}
           <IconButton
-            color="inherit"
             aria-label="open drawer"
             edge="end"
             onClick={handleDrawerToggle}
-            sx={{ display: { md: 'none' } }}
+            sx={{ display: { md: 'none' }, color: 'secondary.main' }}
           >
             <MenuIcon />
           </IconButton>
@@ -171,7 +206,7 @@ function Header() {
         }}
       >
         <Box sx={{ p: 2, display: 'flex', justifyContent: 'flex-end' }}>
-          <IconButton onClick={handleDrawerToggle} sx={{ color: '#ffffff' }}>
+          <IconButton onClick={handleDrawerToggle} sx={{ color: 'secondary.main' }}>
             <CloseIcon />
           </IconButton>
         </Box>
@@ -191,7 +226,7 @@ function Header() {
               <ListItemText
                 primary={item.label}
                 sx={{
-                  color: '#ffffff',
+                  color: 'secondary.main',
                   textAlign: 'center',
                   '& .MuiTypography-root': {
                     fontWeight: 600,

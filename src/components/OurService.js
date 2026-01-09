@@ -6,7 +6,7 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import service1 from '../assets/service1.jpg';
-import service2 from '../assets/service2.jpg';
+import background1 from '../assets/background1.jpg';
 import service3 from '../assets/service3.jpg';
 import service4 from '../assets/service4.jpg';
 
@@ -77,7 +77,7 @@ const services = [
     number: '02',
     title: 'Professional',
     subtitle: 'Here For You',
-    image: service2,
+    image: background1,
   },
   {
     number: '03',

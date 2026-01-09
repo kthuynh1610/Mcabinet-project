@@ -1,12 +1,13 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import OurBackground from './components/OurBackground';
-import OurService from './components/OurService';
-import OpeningHours from './components/OpeningHours';
 import Footer from './components/Footer';
+import Home from './pages/Home';
+import AboutUs from './pages/AboutUs';
+import Projects from './pages/Projects';
+import Services from './pages/Services';
 
 const theme = createTheme({
   palette: {
@@ -87,12 +88,16 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Header />
-      <HeroSection />
-      <OurBackground />
-      <OurService />
-      <OpeningHours />
-      <Footer />
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/services" element={<Services />} />
+        </Routes>
+        <Footer />
+      </Router>
     </ThemeProvider>
   );
 }
