@@ -22,7 +22,7 @@ const ImageGallery = styled(Box)(({ theme }) => ({
 
 const MainImage = styled(Box)(({ theme }) => ({
   width: '100%',
-  height: '500px',
+  height: '750px',
   backgroundColor: 'grey.300',
   display: 'flex',
   alignItems: 'center',
@@ -133,10 +133,20 @@ function ProjectDetail() {
           {/* Image Gallery */}
           <ImageGallery>
             {/* Main Image */}
-            <MainImage>
-              <Typography variant="body2" sx={{ color: 'grey.600' }}>
-                Project Image {selectedImage + 1}
-              </Typography>
+            <MainImage
+              sx={{
+                backgroundImage: project.images && project.images[selectedImage] 
+                  ? `url(${project.images[selectedImage]})` 
+                  : 'none',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+            >
+              {(!project.images || !project.images[selectedImage]) && (
+                <Typography variant="body2" sx={{ color: 'grey.600' }}>
+                  Project Image {selectedImage + 1}
+                </Typography>
+              )}
             </MainImage>
 
             {/* Thumbnail Grid */}
@@ -147,10 +157,17 @@ function ProjectDetail() {
                     <ThumbnailImage
                       active={selectedImage === index}
                       onClick={() => setSelectedImage(index)}
+                      sx={{
+                        backgroundImage: image ? `url(${image})` : 'none',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                      }}
                     >
-                      <Typography variant="caption" sx={{ color: 'grey.600' }}>
-                        {index + 1}
-                      </Typography>
+                      {!image && (
+                        <Typography variant="caption" sx={{ color: 'grey.600' }}>
+                          {index + 1}
+                        </Typography>
+                      )}
                     </ThumbnailImage>
                   </Grid>
                 ))}

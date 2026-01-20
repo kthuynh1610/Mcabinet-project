@@ -1,52 +1,42 @@
 [
   {
     "id": 1,
-    "title": "Modern Kitchen Design",
-    "category": "kitchen",
-    "date": "2024-12-15",
+    "title": "Altona North",
+    "category": "bathroom",
+    "date": "2024-01-15",
     "images": [
-      "",
-      "",
-      "",
-      ""
+      "/images/bathroom/altona-north/IMG_8787.jpeg",
+      "/images/bathroom/altona-north/IMG_8788.jpeg",
+      "/images/bathroom/altona-north/IMG_8790.jpeg",
+      "/images/bathroom/altona-north/IMG_8791.jpeg",
+      "/images/bathroom/altona-north/IMG_8792.jpeg",
+      "/images/bathroom/altona-north/IMG_8793.jpeg"
     ]
   },
   {
     "id": 2,
-    "title": "Luxury Bathroom Renovation",
+    "title": "Aspendale",
     "category": "bathroom",
-    "date": "2024-11-20",
+    "date": "2025-02-20",
     "images": [
-      "",
-      "",
-      ""
+      "/images/bathroom/aspendale/IMG_1613.jpeg",
+      "/images/bathroom/aspendale/IMG_1614.jpeg",
+      "/images/bathroom/aspendale/IMG_1615.jpeg",
+      "/images/bathroom/aspendale/IMG_1657.jpeg"
     ]
   },
   {
     "id": 3,
-    "title": "Custom Home Office",
-    "category": "study",
-    "date": "2024-10-05",
+    "title": "Richmond",
+    "category": "bathroom",
+    "date": "2024-04-18",
     "images": [
-      "",
-      "",
-      "",
-      ""
+      "/images/bathroom/richmond/IMG_1676.jpeg",
+      "/images/bathroom/richmond/IMG_1677.jpeg"
     ]
   },
   {
     "id": 4,
-    "title": "Open Plan Living Space",
-    "category": "living",
-    "date": "2024-09-18",
-    "images": [
-      "",
-      "",
-      ""
-    ]
-  },
-  {
-    "id": 5,
     "title": "Smart Laundry Solution",
     "category": "laundry",
     "date": "2024-08-22",
@@ -57,7 +47,7 @@
     ]
   },
   {
-    "id": 6,
+    "id": 5,
     "title": "Designer Kitchen Island",
     "category": "kitchen",
     "date": "2024-07-10",
@@ -70,9 +60,9 @@
     ]
   },
   {
-    "id": 7,
-    "title": "Minimalist Bathroom Suite",
-    "category": "bathroom",
+    "id": 6,
+    "title": "Modern Living Space",
+    "category": "living",
     "date": "2024-06-15",
     "images": [
       "",
@@ -81,7 +71,7 @@
     ]
   },
   {
-    "id": 8,
+    "id": 7,
     "title": "Executive Study Room",
     "category": "study",
     "date": "2024-05-30",

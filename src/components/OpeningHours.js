@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { Box, Container, Typography, Button, Paper, TextField, Checkbox, FormControlLabel, Grid } from '@mui/material';
+import { Box, Container, Typography, Button, Paper, TextField, Checkbox, FormControlLabel, Grid, Alert, CircularProgress } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import emailjs from '@emailjs/browser';
+import { EMAILJS_CONFIG } from '../config/emailjs';
 import openingHour from '../assets/openingHour.jpg';
 
 const SectionContainer = styled(Box)(({ theme }) => ({
@@ -137,6 +139,9 @@ function OpeningHours() {
     message: '',
     agree: false,
   });
+  
+  const [sending, setSending] = useState(false);
+  const [alert, setAlert] = useState({ show: false, type: '', message: '' });
 
   const handleChange = (e) => {
     const { name, value, checked } = e.target;
@@ -148,8 +153,54 @@ function OpeningHours() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Add email service integration here
+    setSending(true);
+    setAlert({ show: false, type: '', message: '' });
+
+    // Prepare template parameters
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      phone: formData.phone || 'Not provided',
+      message: formData.message,
+      to_email: 'info@mcabinetdesign.com.au',
+    };
+
+    // Send email using EmailJS
+    emailjs
+      .send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        templateParams,
+        EMAILJS_CONFIG.PUBLIC_KEY
+      )
+      .then(
+        (response) => {
+          console.log('Email sent successfully!', response.status, response.text);
+          setAlert({
+            show: true,
+            type: 'success',
+            message: 'Thank you! Your message has been sent successfully. We will get back to you soon.',
+          });
+          // Reset form
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            message: '',
+            agree: false,
+          });
+          setSending(false);
+        },
+        (error) => {
+          console.error('Failed to send email:', error);
+          setAlert({
+            show: true,
+            type: 'error',
+            message: 'Sorry, something went wrong. Please try again or email us directly at info@mcabinetdesign.com.au',
+          });
+          setSending(false);
+        }
+      );
   };
   return (
     <SectionContainer id="contact">
@@ -160,6 +211,13 @@ function OpeningHours() {
         <Typography variant="h1" sx={{ color: 'primary.main', mb: 3 }}>
           Send Us a Message
         </Typography>
+        
+        {alert.show && (
+          <Alert severity={alert.type} sx={{ mb: 2 }}>
+            {alert.message}
+          </Alert>
+        )}
+        
         <form onSubmit={handleSubmit}>
           <StyledTextField
             fullWidth
@@ -224,9 +282,9 @@ function OpeningHours() {
           <SubmitButton 
             type="submit" 
             variant="contained"
-            disabled={!formData.agree}
+            disabled={!formData.agree || sending}
           >
-            Send Message
+            {sending ? <CircularProgress size={24} sx={{ color: 'secondary.main' }} /> : 'Send Message'}
           </SubmitButton>
         </form>
       </ContactFormCard>

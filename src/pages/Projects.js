@@ -164,14 +164,19 @@ function Projects() {
                     sx={{
                       height: 250,
                       backgroundColor: 'grey.300',
+                      backgroundImage: project.images && project.images[0] ? `url(${project.images[0]})` : 'none',
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
                     }}
                   >
-                    <Typography variant="body2" sx={{ color: 'grey.600' }}>
-                      Project Image
-                    </Typography>
+                    {(!project.images || !project.images[0]) && (
+                      <Typography variant="body2" sx={{ color: 'grey.600' }}>
+                        Project Image
+                      </Typography>
+                    )}
                   </CardMedia>
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography
