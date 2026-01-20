@@ -1,5 +1,5 @@
-import React from 'react';
-import { Box, Container, Typography, Button, Paper } from '@mui/material';
+import React, { useState } from 'react';
+import { Box, Container, Typography, Button, Paper, TextField, Checkbox, FormControlLabel, Grid } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import openingHour from '../assets/openingHour.jpg';
 
@@ -68,10 +68,170 @@ const HoursItem = styled(Box)(({ theme }) => ({
   },
 }));
 
+const ContactFormCard = styled(Paper)(({ theme }) => ({
+  position: 'absolute',
+  top: '50%',
+  left: theme.spacing(10),
+  transform: 'translateY(-50%)',
+  zIndex: 1,
+  backgroundColor: theme.palette.secondary.main,
+  padding: theme.spacing(5),
+  width: '550px',
+  opacity: '90%',
+  borderRadius: '8px',
+  [theme.breakpoints.down('md')]: {
+    position: 'relative',
+    top: 'auto',
+    left: 'auto',
+    transform: 'none',
+    margin: theme.spacing(4, 2),
+    maxWidth: '100%',
+  },
+}));
+
+const StyledTextField = styled(TextField)(({ theme }) => ({
+  marginBottom: theme.spacing(2),
+  '& .MuiOutlinedInput-root': {
+    color: theme.palette.primary.main,
+    backgroundColor: 'rgba(255, 255, 255, 0.7)',
+    '& fieldset': {
+      borderColor: theme.palette.primary.main,
+    },
+    '&:hover fieldset': {
+      borderColor: theme.palette.primary.main,
+    },
+    '&.Mui-focused fieldset': {
+      borderColor: theme.palette.primary.main,
+    },
+  },
+  '& .MuiInputLabel-root': {
+    color: theme.palette.primary.main,
+  },
+  '& .MuiInputLabel-root.Mui-focused': {
+    color: theme.palette.primary.main,
+  },
+}));
+
+const SubmitButton = styled(Button)(({ theme }) => ({
+  backgroundColor: theme.palette.primary.main,
+  color: theme.palette.secondary.main,
+  padding: theme.spacing(1.5, 4),
+  fontWeight: 600,
+  borderRadius: 10,
+  width: '100%',
+  marginTop: theme.spacing(2),
+  '&:hover': {
+    backgroundColor: theme.palette.primary.dark,
+  },
+  '&:disabled': {
+    backgroundColor: 'rgba(53, 23, 13, 0.5)',
+    color: 'rgba(254, 246, 227, 0.5)',
+  },
+}));
+
 function OpeningHours() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+    agree: false,
+  });
+
+  const handleChange = (e) => {
+    const { name, value, checked } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: name === 'agree' ? checked : value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+    // Add email service integration here
+  };
   return (
     <SectionContainer id="contact">
       <BackgroundImage />
+      
+      {/* Contact Form Card */}
+      <ContactFormCard>
+        <Typography variant="h1" sx={{ color: 'primary.main', mb: 3 }}>
+          Send Us a Message
+        </Typography>
+        <form onSubmit={handleSubmit}>
+          <StyledTextField
+            fullWidth
+            required
+            label="Name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            variant="outlined"
+          />
+          <StyledTextField
+            fullWidth
+            required
+            label="Email"
+            name="email"
+            type="email"
+            value={formData.email}
+            onChange={handleChange}
+            variant="outlined"
+          />
+          <StyledTextField
+            fullWidth
+            label="Phone (optional)"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            variant="outlined"
+          />
+          <StyledTextField
+            fullWidth
+            required
+            label="Message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            variant="outlined"
+            multiline
+            rows={3}
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                name="agree"
+                checked={formData.agree}
+                onChange={handleChange}
+                required
+                sx={{
+                  color: 'primary.main',
+                  '&.Mui-checked': {
+                    color: 'primary.main',
+                  },
+                }}
+              />
+            }
+            label={
+              <Typography variant="body2" sx={{ color: 'primary.main', fontSize: '0.875rem' }}>
+                I agree to receive a reply and understand my data will be used according to the privacy policy.
+              </Typography>
+            }
+            sx={{ mb: 1, alignItems: 'flex-start' }}
+          />
+          <SubmitButton 
+            type="submit" 
+            variant="contained"
+            disabled={!formData.agree}
+          >
+            Send Message
+          </SubmitButton>
+        </form>
+      </ContactFormCard>
+
+      {/* Opening Hours Card */}
       <HoursCard id="hours-card">
         <Typography variant="h1" sx={{ color: 'primary.main', mb: 1 }}>
           Opening Hours
@@ -92,11 +252,7 @@ function OpeningHours() {
               Sun: Closed
             </Typography> 
         </Box>
-        <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-          <ContactButton>
-            Contact Us
-          </ContactButton>
-        </Box> 
+        
       </HoursCard>
     </SectionContainer>
   );

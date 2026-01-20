@@ -1,0 +1,95 @@
+[
+  {
+    "id": 1,
+    "title": "Modern Kitchen Design",
+    "category": "kitchen",
+    "date": "2024-12-15",
+    "images": [
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Luxury Bathroom Renovation",
+    "category": "bathroom",
+    "date": "2024-11-20",
+    "images": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Custom Home Office",
+    "category": "study",
+    "date": "2024-10-05",
+    "images": [
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Open Plan Living Space",
+    "category": "living",
+    "date": "2024-09-18",
+    "images": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Smart Laundry Solution",
+    "category": "laundry",
+    "date": "2024-08-22",
+    "images": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Designer Kitchen Island",
+    "category": "kitchen",
+    "date": "2024-07-10",
+    "images": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Minimalist Bathroom Suite",
+    "category": "bathroom",
+    "date": "2024-06-15",
+    "images": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Executive Study Room",
+    "category": "study",
+    "date": "2024-05-30",
+    "images": [
+      "",
+      "",
+      ""
+    ]
+  }
+]
+

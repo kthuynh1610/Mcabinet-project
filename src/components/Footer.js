@@ -4,6 +4,7 @@ import { styled } from '@mui/material/styles';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
+import StorefrontIcon from '@mui/icons-material/Storefront';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -67,7 +68,7 @@ const SocialIcon = styled(Box)(({ theme }) => ({
 
 function Footer() {
   return (
-    <FooterContainer id="contact">
+    <FooterContainer>
       <Container maxWidth="lg">
         <Grid container spacing={4}>
           <Grid item xs={12} md={6}>
@@ -95,22 +96,40 @@ function Footer() {
             >
               Get In Touch
             </Typography>
+            <Typography 
+              variant="h3" 
+              sx={{ 
+                color: 'secondary.main', 
+                mb: 2, 
+                fontWeight: 500,
+                textAlign: { xs: 'center', md: 'left' },
+                fontSize: { xs: '1.25rem', md: '1.5rem' }
+              }}
+            >
+              MCabinetDesign Pty Ltd
+            </Typography>
             <ContactItem>
               <LocationOnIcon sx={{ color: 'secondary.main', mt: 0.5, flexShrink: 0 }} />
               <Typography variant="body1" sx={{ color: 'secondary.main', lineHeight: 1.8 }}>
-                03 Balcombe St Sunshine North Vic 3020
+                Chadstone, Melbourne, Australia
               </Typography>
             </ContactItem>
             <ContactItem>
-              <EmailIcon sx={{ color: 'secondary.main', mt: 0.5, flexShrink: 0 }} />
-              <Typography variant="body1" sx={{ color: 'secondary.main', lineHeight: 1.8 }}>
-                justav4m@hotmail.com
+              <StorefrontIcon sx={{ color: 'secondary.main', mt: 0.5, flexShrink: 0 }} />
+              <Typography variant="body1" sx={{ color: 'secondary.main', lineHeight: 1.8, fontStyle: 'italic' }}>
+                Showroom: coming soon
               </Typography>
             </ContactItem>
             <ContactItem>
               <PhoneIcon sx={{ color: 'secondary.main', mt: 0.5, flexShrink: 0 }} />
               <Typography variant="body1" sx={{ color: 'secondary.main', lineHeight: 1.8 }}>
                 +61 433 131 290
+              </Typography>
+            </ContactItem>
+            <ContactItem>
+              <EmailIcon sx={{ color: 'secondary.main', mt: 0.5, flexShrink: 0 }} />
+              <Typography variant="body1" sx={{ color: 'secondary.main', lineHeight: 1.8 }}>
+                info@mcabinetdesign.com.au
               </Typography>
             </ContactItem>
             <Box sx={{ display: 'flex', gap: 2, mt: 3, justifyContent: { xs: 'center', md: 'flex-start' } }}>
@@ -128,7 +147,7 @@ function Footer() {
         </Grid>
         <Box sx={{ textAlign: 'center', mt: 4, pt: 3, borderTop: '1px solid rgba(255,255,255,0.1)' }}>
           <Typography variant="body2" sx={{ color: '#ffffff', opacity: 0.8 }}>
-            ©2025 by M Cabinet Design
+            ©2025 by MCabinetDesign Pty Ltd
           </Typography>
         </Box>
       </Container>

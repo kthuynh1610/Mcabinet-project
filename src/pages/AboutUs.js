@@ -118,21 +118,10 @@ function AboutUs() {
               variant="body1"
               sx={{ color: 'primary.main', mb: 3, fontSize: '1.05rem' }}
             >
-              Since being established in 2009, M Design Cabinet has been known
-              for an unparalleled commitment to customer satisfaction. It's this
-              standard of excellence that has provided the impetus for us to grow
-              into the business we are today.
+              MCabinetDesign is a premium cabinetry and joinery studio based in Melbourne, specialising in bespoke solutions for high-end residential and commercial projects.
+              Founded in 2009, our journey began as a small workshop with a passion for craftsmanship, quality and attention to detail. Over the years, through consistent excellence and trusted relationships with builders, architects, and interior designers, we have grown into MCabinetDesign — a brand recognised for delivering sophisticated, tailored joinery across Melbourne.
             </Typography>
-            <Typography
-              variant="body1"
-              sx={{ color: 'primary.main', mb: 4, fontSize: '1.05rem' }}
-            >
-              Bespoke joinery solutions for high end builders, architects &
-              interior designers. Based in Melbourne we are sophisticated cabinet
-              makers and joiners working with residential, commercial clients. We
-              combine traditional craftsmanship, modern materials and contemporary
-              design with expert technology to achieve high-end results.
-            </Typography>
+           
             <ContactButton onClick={handleContactClick}>
               Contact Us
             </ContactButton>
@@ -158,7 +147,7 @@ function AboutUs() {
         <Box 
           sx={{ 
             bgcolor: '#fff0d0', 
-            height: '450px', 
+            height: '550px', 
             position: 'absolute',
             top: '100px',
             left: 0,
@@ -178,7 +167,7 @@ function AboutUs() {
                 alt="Modern Kitchen Interior"
                 sx={{
                   width: '100%',
-                  height: '550px',
+                  height: '650px',
                   objectFit: 'cover',
                 }}
               />
@@ -199,11 +188,27 @@ function AboutUs() {
                 variant="body1"
                 sx={{ color: 'primary.main', fontSize: '1.05rem' }}
               >
-                No matter how big or small your idea may be, we can guide or assist
-                you through the entire process from start to finish. We make
-                everything from scratch to extremely high standards and the team at
-                Mdesign Interiors have many years experience in all facets of
-                joinery and cabinet making.
+                Comprehensive Service
+              </Typography>
+              <Typography
+                variant="body1"
+                sx={{ color: 'primary.main', fontSize: '1.05rem' }}
+              >
+                We guide every project from initial concept to final installation, making the process seamless for clients and project teams alike. Our experienced designers and craftsmen can work with your plans or develop solutions from scratch.
+                Trusted by Professionals
+                <Typography
+                variant="body1"
+                sx={{ color: 'primary.main', fontSize: '1.05rem' }}
+              >
+                We have established strong relationships with premium builders, architects, and interior designers. Our clients rely on us to deliver realistic timelines, high-quality results, and expert guidance on design, functionality, and material selection.
+                Transparent Communication
+                </Typography>
+                <Typography
+                variant="body1"
+                sx={{ color: 'primary.main', fontSize: '1.05rem' }}
+              >
+                We provide clear quotations, re-quote as needed, and suggest cost-saving alternatives if required. We are flexible with appointments and always aim to meet the unique needs of our clients and partners.
+                </Typography>
               </Typography>
             </Grid>
           </Grid>
@@ -224,17 +229,26 @@ function AboutUs() {
                   fontSize: { xs: '2rem', md: '2.5rem' }
                 }}
               >
-                The Difference
+                Design & Technology
               </Typography>
               <Typography
                 variant="body1"
                 sx={{ color: 'primary.main', fontSize: '1.05rem' }}
               >
-                We communicate openly, have great, up-to-the-minute design ideas,
-                quote fairly, re-quote and negotiate co-operatively and suggest ways
-                for clients to save money if budget is an issue. We are happy to
-                make appointments outside office hours and be flexible to meet the
-                needs of clients and industry partners.
+                At MCabinetDesign, we combine traditional craftsmanship with cutting-edge technology:
+                </Typography>
+                <Typography
+                variant="body1"
+                sx={{ color: 'primary.main', fontSize: '1.05rem' }}
+              >
+                •	Advanced CNC machinery for precision manufacturing
+                </Typography>
+                <Typography
+                variant="body1"
+                sx={{ color: 'primary.main', fontSize: '1.05rem' }}
+              >
+                •	AutoCAD and AutoKitchen 3D design for accurate planning and visualization
+                Our designers work collaboratively to ensure every space is optimised for workflow, storage, and aesthetics.
               </Typography>
             </Grid>
             
@@ -263,16 +277,46 @@ function AboutUs() {
                   fontSize: { xs: '2rem', md: '2.5rem' }
                 }}
               >
-                Quality & Technology
+                Quality Materials
               </Typography>
               <Typography
                 variant="body1"
                 sx={{ color: 'primary.main', fontSize: '1.05rem' }}
               >
-                We work with the very highest quality materials available and have
-                strong relationships with our suppliers, creating beautiful end
-                results with traditional, contemporary or unusual materials.
-              </Typography>
+               We use only premium materials sourced from trusted suppliers, including:
+                •	Laminates, vinyl wraps, 2-Pac finishes
+                </Typography>
+                <Typography
+                variant="body1"
+                sx={{ color: 'primary.main', fontSize: '1.05rem' }}
+              >
+                •	Natural and engineered veneers
+                </Typography>
+                <Typography
+                variant="body1"
+                sx={{ color: 'primary.main', fontSize: '1.05rem' }}
+              >
+                •	Solid timber and plywood
+                </Typography>
+                <Typography
+                variant="body1"
+                sx={{ color: 'primary.main', fontSize: '1.05rem' }}
+              >
+                •	Natural and reconstituted stone
+                </Typography>
+                <Typography
+                variant="body1"
+                sx={{ color: 'primary.main', fontSize: '1.05rem' }}
+              >
+                •	Stainless steel
+                </Typography>
+                <Typography
+                variant="body1"
+                sx={{ color: 'primary.main', fontSize: '1.05rem' }}
+              >
+                Where possible, we incorporate environmentally sustainable materials and eco-conscious design practices.
+                </Typography>
+             
             </Grid>
           </Grid>
         </Box>

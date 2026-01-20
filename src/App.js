@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Projects from './pages/Projects';
+import ProjectDetail from './pages/ProjectDetail';
 import Services from './pages/Services';
 
 const theme = createTheme({
@@ -94,6 +95,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:id" element={<ProjectDetail />} />
           <Route path="/services" element={<Services />} />
         </Routes>
         <Footer />
