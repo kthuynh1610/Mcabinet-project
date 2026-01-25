@@ -72,6 +72,7 @@ function Projects() {
     { id: 'living', label: 'Living area' },
     { id: 'bathroom', label: 'Bathroom' },
     { id: 'laundry', label: 'Laudries' },
+    { id: 'wardrobe', label: 'Wardrobes' },
     { id: 'study', label: 'Custom Work & Study Station' },
     { id: 'storage', label: 'Storage' },
   ];
