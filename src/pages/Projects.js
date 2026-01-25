@@ -72,7 +72,8 @@ function Projects() {
     { id: 'living', label: 'Living area' },
     { id: 'bathroom', label: 'Bathroom' },
     { id: 'laundry', label: 'Laudries' },
-    { id: 'study', label: 'Work & Study Station' },
+    { id: 'study', label: 'Custom Work & Study Station' },
+    { id: 'storage', label: 'Storage' },
   ];
 
   const [projects, setProjects] = useState([]);

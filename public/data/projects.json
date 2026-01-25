@@ -37,49 +37,193 @@
   },
   {
     "id": 4,
-    "title": "Smart Laundry Solution",
-    "category": "laundry",
-    "date": "2024-08-22",
+    "title": "Essendon",
+    "category": "kitchen",
+    "date": "2022-08-15",
     "images": [
-      "",
-      "",
-      ""
+      "/images/kitchen/essendon-08-2022/IMG_0558.jpeg",
+      "/images/kitchen/essendon-08-2022/IMG_0559.jpeg",
+      "/images/kitchen/essendon-08-2022/IMG_0563.jpeg"
     ]
   },
   {
     "id": 5,
-    "title": "Designer Kitchen Island",
+    "title": "Maribyrnong",
     "category": "kitchen",
-    "date": "2024-07-10",
+    "date": "2024-07-15",
     "images": [
-      "",
-      "",
-      "",
-      "",
-      ""
+      "/images/kitchen/maribyrnong-07-2024/IMG_9616.jpeg",
+      "/images/kitchen/maribyrnong-07-2024/IMG_9617.jpeg",
+      "/images/kitchen/maribyrnong-07-2024/IMG_9619.jpeg",
+      "/images/kitchen/maribyrnong-07-2024/IMG_9620.jpeg",
+      "/images/kitchen/maribyrnong-07-2024/IMG_9621.jpeg"
     ]
   },
   {
     "id": 6,
-    "title": "Modern Living Space",
-    "category": "living",
-    "date": "2024-06-15",
+    "title": "Point Cook",
+    "category": "kitchen",
+    "date": "2024-08-15",
     "images": [
-      "",
-      "",
-      ""
+      "/images/kitchen/pointcook-08-2024/IMG_5963.jpeg",
+      "/images/kitchen/pointcook-08-2024/IMG_5964.jpeg",
+      "/images/kitchen/pointcook-08-2024/IMG_5965.jpeg",
+      "/images/kitchen/pointcook-08-2024/IMG_5966.jpeg"
     ]
   },
   {
     "id": 7,
-    "title": "Executive Study Room",
-    "category": "study",
-    "date": "2024-05-30",
+    "title": "Fraiser Rise",
+    "category": "laundry",
+    "date": "2022-06-15",
     "images": [
-      "",
-      "",
-      ""
+      "/images/laundry/fraiser-rise-06-2022/IMG_5607.jpeg",
+      "/images/laundry/fraiser-rise-06-2022/IMG_7139.jpeg"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "McKinnon",
+    "category": "laundry",
+    "date": "2021-07-15",
+    "images": [
+      "/images/laundry/mckinnon-07-2021/IMG_8784.jpeg",
+      "/images/laundry/mckinnon-07-2021/IMG_8794.jpeg"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Keilor East",
+    "category": "living",
+    "date": "2024-12-15",
+    "images": [
+      "/images/living-area/keilor-east-12-2024/IMG_8784.jpeg",
+      "/images/living-area/keilor-east-12-2024/IMG_8794.jpeg"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Malvern East",
+    "category": "living",
+    "date": "2023-02-15",
+    "images": [
+      "/images/living-area/malvern-east-02-2023/IMG_1855.jpeg",
+      "/images/living-area/malvern-east-02-2023/IMG_1856.jpeg"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Maribyrnong",
+    "category": "living",
+    "date": "2024-09-15",
+    "images": [
+      "/images/living-area/maribyrnong-09-2024/IMG_0053.jpeg",
+      "/images/living-area/maribyrnong-09-2024/IMG_0054.jpeg",
+      "/images/living-area/maribyrnong-09-2024/IMG_0055.jpeg",
+      "/images/living-area/maribyrnong-09-2024/IMG_0056.jpeg"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Brighton",
+    "category": "storage",
+    "date": "2025-09-15",
+    "images": [
+      "/images/storage/brighton-09-2025/IMG_2137.jpeg",
+      "/images/storage/brighton-09-2025/IMG_2138.jpeg",
+      "/images/storage/brighton-09-2025/IMG_8299.jpeg"
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Greenvale",
+    "category": "storage",
+    "date": "2024-05-15",
+    "images": [
+      "/images/storage/greenvale-05-2024/IMG_9358.jpeg",
+      "/images/storage/greenvale-05-2024/IMG_9359.jpeg",
+      "/images/storage/greenvale-05-2024/IMG_9360.jpeg",
+      "/images/storage/greenvale-05-2024/IMG_9361.jpeg"
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Keilor East",
+    "category": "storage",
+    "date": "2022-12-15",
+    "images": [
+      "/images/storage/keilor-east-12-2022/IMG_5211.jpeg",
+      "/images/storage/keilor-east-12-2022/IMG_5230.jpeg",
+      "/images/storage/keilor-east-12-2022/IMG_5232.jpeg"
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Cairnlea",
+    "category": "study",
+    "date": "2025-12-15",
+    "images": [
+      "/images/warddrobes/cairnlea-12-2025/IMG_2370.jpeg",
+      "/images/warddrobes/cairnlea-12-2025/IMG_2401.jpeg",
+      "/images/warddrobes/cairnlea-12-2025/IMG_2466.jpeg",
+      "/images/warddrobes/cairnlea-12-2025/IMG_2484.jpeg",
+      "/images/warddrobes/cairnlea-12-2025/IMG_2490.jpeg"
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Dandenong",
+    "category": "study",
+    "date": "2022-10-15",
+    "images": [
+      "/images/warddrobes/dandenong-10-2022/IMG_4608.jpeg",
+      "/images/warddrobes/dandenong-10-2022/IMG_4611.jpeg",
+      "/images/warddrobes/dandenong-10-2022/IMG_4613.jpeg"
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Kew",
+    "category": "study",
+    "date": "2025-05-15",
+    "images": [
+      "/images/warddrobes/kew-05-2025/IMG_1690.jpeg",
+      "/images/warddrobes/kew-05-2025/IMG_1691.jpeg",
+      "/images/warddrobes/kew-05-2025/IMG_1692.jpeg",
+      "/images/warddrobes/kew-05-2025/IMG_1693.jpeg",
+      "/images/warddrobes/kew-05-2025/IMG_1841.jpeg"
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Coburg",
+    "category": "study",
+    "date": "2025-11-15",
+    "images": [
+      "/images/work-and-study/coburg-11-2025/IMG_4553.jpeg",
+      "/images/work-and-study/coburg-11-2025/IMG_4554.jpeg",
+      "/images/work-and-study/coburg-11-2025/IMG_5467.jpeg"
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Sunshine",
+    "category": "study",
+    "date": "2021-05-15",
+    "images": [
+      "/images/work-and-study/sunshine-05-2021/IMG_4608.jpeg",
+      "/images/work-and-study/sunshine-05-2021/IMG_4611.jpeg",
+      "/images/work-and-study/sunshine-05-2021/IMG_4613.jpeg"
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Tarneit",
+    "category": "study",
+    "date": "2023-07-15",
+    "images": [
+      "/images/work-and-study/tarneit-07-2023/IMG_4958.PNG",
+      "/images/work-and-study/tarneit-07-2023/IMG_4959.PNG"
     ]
   }
 ]
-
