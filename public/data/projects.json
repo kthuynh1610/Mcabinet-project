@@ -13,6 +13,7 @@
       "/images/bathroom/altona-north/IMG_8793.jpeg"
     ]
   },
+  
   {
     "id": 2,
     "title": "Aspendale",
@@ -225,5 +226,14 @@
       "/images/work-and-study/tarneit-07-2023/IMG_4958.PNG",
       "/images/work-and-study/tarneit-07-2023/IMG_4959.PNG"
     ]
+  },
+{
+    "id": 21,
+    "title": "Springvale",
+    "category": "bathroom",
+    "date": "2022-08-15",
+    "images": [
+      "/images/bathroom/springvale/springvale1.PNG"
+         ]
   }
 ]
