@@ -39,41 +39,110 @@
   {
     "id": 4,
     "title": "Essendon",
-    "category": "kitchen",
+    "category": "kitchen-living",
     "date": "2022-08-15",
     "images": [
-      "/images/kitchen/essendon-08-2022/IMG_0558.jpeg",
-      "/images/kitchen/essendon-08-2022/IMG_0559.jpeg",
-      "/images/kitchen/essendon-08-2022/IMG_0563.jpeg"
+      "/images/kitchen-living/essendon-08-2022/IMG_0558.jpeg",
+      "/images/kitchen-living/essendon-08-2022/IMG_0559.jpeg",
+      "/images/kitchen-living/essendon-08-2022/IMG_0563.jpeg"
     ]
   },
   {
     "id": 5,
     "title": "Maribyrnong",
-    "category": "kitchen",
+    "category": "kitchen-living",
     "date": "2024-07-15",
     "images": [
-      "/images/kitchen/maribyrnong-07-2024/IMG_9616.jpeg",
-      "/images/kitchen/maribyrnong-07-2024/IMG_9617.jpeg",
-      "/images/kitchen/maribyrnong-07-2024/IMG_9619.jpeg",
-      "/images/kitchen/maribyrnong-07-2024/IMG_9620.jpeg",
-      "/images/kitchen/maribyrnong-07-2024/IMG_9621.jpeg"
+      "/images/kitchen-living/maribyrnong-07-2024/IMG_9616.jpeg",
+      "/images/kitchen-living/maribyrnong-07-2024/IMG_9617.jpeg",
+      "/images/kitchen-living/maribyrnong-07-2024/IMG_9619.jpeg",
+      "/images/kitchen-living/maribyrnong-07-2024/IMG_9620.jpeg",
+      "/images/kitchen-living/maribyrnong-07-2024/IMG_9621.jpeg",
+      "/images/kitchen-living/maribyrnong-07-2024/IMG_9622.jpg",
+      "/images/kitchen-living/maribyrnong-07-2024/IMG_0053.jpeg",
+      "/images/kitchen-living/maribyrnong-07-2024/IMG_0054.jpeg",
+      "/images/kitchen-living/maribyrnong-07-2024/IMG_0055.jpeg",
+      "/images/kitchen-living/maribyrnong-07-2024/IMG_0056.jpeg"
     ]
   },
   {
     "id": 6,
     "title": "Point Cook",
-    "category": "kitchen",
+    "category": "kitchen-living",
     "date": "2024-08-15",
     "images": [
-      "/images/kitchen/pointcook-08-2024/IMG_5963.jpeg",
-      "/images/kitchen/pointcook-08-2024/IMG_5964.jpeg",
-      "/images/kitchen/pointcook-08-2024/IMG_5965.jpeg",
-      "/images/kitchen/pointcook-08-2024/IMG_5966.jpeg"
+      "/images/kitchen-living/pointcook-08-2024/IMG_5963.jpeg",
+      "/images/kitchen-living/pointcook-08-2024/IMG_5964.jpeg",
+      "/images/kitchen-living/pointcook-08-2024/IMG_5965.jpeg",
+      "/images/kitchen-living/pointcook-08-2024/IMG_5966.jpeg"
     ]
   },
   {
     "id": 7,
+    "title": "Malvern East",
+    "category": "kitchen-living",
+    "date": "2023-02-15",
+    "images": [
+      "/images/kitchen-living/malvern-east-02-2023/IMG_1855.jpeg",
+      "/images/kitchen-living/malvern-east-02-2023/IMG_1856.jpeg"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "truganina",
+    "category": "kitchen-living",
+    "date": "2024-06-15",
+    "images": [
+      "/images/kitchen-living/truganina-06-2024/IMG_5412.jpg",
+      "/images/kitchen-living/truganina-06-2024/IMG_5413.jpg"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "tairneit",
+    "category": "kitchen-living",
+    "date": "2020-11-15",
+    "images": [
+      "/images/kitchen-living/tairneit-11-2020/IMG_5808.jpg",
+      "/images/kitchen-living/tairneit-11-2020/IMG_6117.jpg",
+      "/images/kitchen-living/tairneit-11-2020/IMG_6263.jpg"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Essendon",
+    "category": "kitchen-living",
+    "date": "2021-07-15",
+    "images": [
+      "/images/kitchen-living/essendon-07-2021/IMG_3942.jpg",
+      "/images/kitchen-living/essendon-07-2021/IMG_3943.jpg",
+      "/images/kitchen-living/essendon-07-2021/IMG_3945.jpg",
+      "/images/kitchen-living/essendon-07-2021/IMG_3946.jpg"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Malvern",
+    "category": "kitchen-living",
+    "date": "2025-06-15",
+    "images": [
+      "/images/kitchen-living/malvern-06-2025/IMG_7220.jpg",
+      "/images/kitchen-living/malvern-06-2025/IMG_7221.jpg",
+      "/images/kitchen-living/malvern-06-2025/IMG_7222.jpg"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "footscray",
+    "category": "kitchen-living",
+    "date": "2021-11-15",
+    "images": [
+      "/images/kitchen-living/footscray-11-2021/IMG_1543.jpg",
+      "/images/kitchen-living/footscray-11-2021/IMG_1545.jpg"
+    ]
+  },
+  {
+    "id": 13,
     "title": "Fraiser Rise",
     "category": "laundry",
     "date": "2022-06-15",
@@ -83,7 +152,7 @@
     ]
   },
   {
-    "id": 8,
+    "id": 14,
     "title": "McKinnon",
     "category": "laundry",
     "date": "2021-07-15",
@@ -93,39 +162,23 @@
     ]
   },
   {
-    "id": 9,
-    "title": "Keilor East",
-    "category": "living",
-    "date": "2024-12-15",
+    "id": 15,
+    "title": "Laundry collection",
+    "category": "laundry",
+    "date": "2023-09-15",
     "images": [
-      "/images/living-area/keilor-east-12-2024/IMG_8784.jpeg",
-      "/images/living-area/keilor-east-12-2024/IMG_8794.jpeg"
+      "/images/laundry/laundry-collection-09-2023/IMG_1946.jpg",
+      "/images/laundry/laundry-collection-09-2023/IMG_1962.jpg",
+      "/images/laundry/laundry-collection-09-2023/IMG_3940.jpg",
+      "/images/laundry/laundry-collection-09-2023/IMG_5054.jpg",
+      "/images/laundry/laundry-collection-09-2023/IMG_5462.jpg",
+      "/images/laundry/laundry-collection-09-2023/IMG_6172.jpg",
+      "/images/laundry/laundry-collection-09-2023/IMG_7224.jpg",
+      "/images/laundry/laundry-collection-09-2023/IMG_7225.jpg"
     ]
   },
   {
-    "id": 10,
-    "title": "Malvern East",
-    "category": "living",
-    "date": "2023-02-15",
-    "images": [
-      "/images/living-area/malvern-east-02-2023/IMG_1855.jpeg",
-      "/images/living-area/malvern-east-02-2023/IMG_1856.jpeg"
-    ]
-  },
-  {
-    "id": 11,
-    "title": "Maribyrnong",
-    "category": "living",
-    "date": "2024-09-15",
-    "images": [
-      "/images/living-area/maribyrnong-09-2024/IMG_0053.jpeg",
-      "/images/living-area/maribyrnong-09-2024/IMG_0054.jpeg",
-      "/images/living-area/maribyrnong-09-2024/IMG_0055.jpeg",
-      "/images/living-area/maribyrnong-09-2024/IMG_0056.jpeg"
-    ]
-  },
-  {
-    "id": 12,
+    "id": 16,
     "title": "Brighton",
     "category": "storage",
     "date": "2025-09-15",
@@ -136,7 +189,7 @@
     ]
   },
   {
-    "id": 13,
+    "id": 17,
     "title": "Greenvale",
     "category": "storage",
     "date": "2024-05-15",
@@ -148,42 +201,59 @@
     ]
   },
   {
-    "id": 14,
+    "id": 18,
     "title": "Keilor East",
     "category": "storage",
     "date": "2022-12-15",
     "images": [
-      "/images/storage/keilor-east-12-2022/IMG_5211.jpeg",
-      "/images/storage/keilor-east-12-2022/IMG_5230.jpeg",
-      "/images/storage/keilor-east-12-2022/IMG_5232.jpeg"
+      "/images/storage/keilor-east-12-2022/IMG_4945.jpg",
+      "/images/storage/keilor-east-12-2022/IMG_4946.jpg",
+      "/images/storage/keilor-east-12-2022/IMG_4947.jpg",
+      "/images/storage/keilor-east-12-2022/IMG_4948.jpg",
+      "/images/storage/keilor-east-12-2022/IMG_4950.jpg",
+      "/images/storage/keilor-east-12-2022/IMG_4951.jpg"
     ]
   },
   {
-    "id": 15,
+    "id": 19,
     "title": "Cairnlea",
     "category": "wardrobe",
     "date": "2025-12-15",
     "images": [
-      "/images/warddrobes/cairnlea-12-2025/IMG_2370.jpeg",
-      "/images/warddrobes/cairnlea-12-2025/IMG_2401.jpeg",
+      "/images/warddrobes/cairnlea-12-2025/IMG_2467.jpg",
+      "/images/warddrobes/cairnlea-12-2025/IMG_2468.jpg",
       "/images/warddrobes/cairnlea-12-2025/IMG_2466.jpeg",
       "/images/warddrobes/cairnlea-12-2025/IMG_2484.jpeg",
       "/images/warddrobes/cairnlea-12-2025/IMG_2490.jpeg"
     ]
   },
   {
-    "id": 16,
+    "id": 20,
     "title": "Dandenong",
     "category": "wardrobe",
     "date": "2022-10-15",
     "images": [
       "/images/warddrobes/dandenong-10-2022/IMG_4608.jpeg",
-      "/images/warddrobes/dandenong-10-2022/IMG_4611.jpeg",
+      "/images/warddrobes/dandenong-10-2022/IMG_4614.jpg",
       "/images/warddrobes/dandenong-10-2022/IMG_4613.jpeg"
     ]
   },
   {
-    "id": 17,
+    "id": 21,
+    "title": "keilor",
+    "category": "wardrobe",
+    "date": "2022-11-15",
+    "images": [
+      "/images/warddrobes/keilor-11-2022/IMG_2783.jpg",
+      "/images/warddrobes/keilor-11-2022/IMG_2784.jpg",
+      "/images/warddrobes/keilor-11-2022/IMG_2788.jpg",
+      "/images/warddrobes/keilor-11-2022/IMG_2789.jpg",
+      "/images/warddrobes/keilor-11-2022/IMG_2791.jpg",
+      "/images/warddrobes/keilor-11-2022/IMG_2792.jpg"
+    ]
+  },
+  {
+    "id": 22,
     "title": "Kew",
     "category": "wardrobe",
     "date": "2025-05-15",
@@ -196,44 +266,92 @@
     ]
   },
   {
-    "id": 18,
-    "title": "Coburg",
-    "category": "study",
+    "id": 23,
+    "title": "study collection",
+    "category": "projects-and-study-station",
     "date": "2025-11-15",
     "images": [
-      "/images/work-and-study/coburg-11-2025/IMG_4553.jpeg",
-      "/images/work-and-study/coburg-11-2025/IMG_4554.jpeg",
-      "/images/work-and-study/coburg-11-2025/IMG_5467.jpeg"
+      "/images/projects-and-study-station/study-collection-11-2025/IMG_4553.jpeg",
+      "/images/projects-and-study-station/study-collection-11-2025/IMG_4554.jpeg",
+      "/images/projects-and-study-station/study-collection-11-2025/IMG_5467.jpeg",
+      "/images/projects-and-study-station/study-collection-11-2025/IMG_1542.jpg",
+      "/images/projects-and-study-station/study-collection-11-2025/IMG_1543.jpg",
+      "/images/projects-and-study-station/study-collection-11-2025/IMG_1544.jpg",
+      "/images/projects-and-study-station/study-collection-11-2025/IMG_1547.jpg",
+      "/images/projects-and-study-station/study-collection-11-2025/IMG_4985.jpg",
+      "/images/projects-and-study-station/study-collection-11-2025/IMG_5855.jpg",
+      "/images/projects-and-study-station/study-collection-11-2025/IMG_5856.jpg",
+      "/images/projects-and-study-station/study-collection-11-2025/IMG_6095.jpg",
+      "/images/projects-and-study-station/study-collection-11-2025/IMG_6432.jpg"
     ]
   },
   {
-    "id": 19,
-    "title": "Sunshine",
-    "category": "study",
+    "id": 24,
+    "title": "Altona North",
+    "category": "projects-and-study-station",
     "date": "2021-05-15",
     "images": [
-      "/images/work-and-study/sunshine-05-2021/IMG_4608.jpeg",
-      "/images/work-and-study/sunshine-05-2021/IMG_4611.jpeg",
-      "/images/work-and-study/sunshine-05-2021/IMG_4613.jpeg"
+      "/images/projects-and-study-station/altona-north-05-2021/IMG_8734.jpg",
+      "/images/projects-and-study-station/altona-north-05-2021/IMG_8735.jpg",
+      "/images/projects-and-study-station/altona-north-05-2021/IMG_8756.jpg",
+      "/images/projects-and-study-station/altona-north-05-2021/IMG_8757.jpg",
+      "/images/projects-and-study-station/altona-north-05-2021/IMG_8763.jpg",
+      "/images/projects-and-study-station/altona-north-05-2021/IMG_8764.jpg",
+      "/images/projects-and-study-station/altona-north-05-2021/IMG_8765.jpg",
+      "/images/projects-and-study-station/altona-north-05-2021/IMG_8766.jpg",
+      "/images/projects-and-study-station/altona-north-05-2021/IMG_8768.jpg",
+      "/images/projects-and-study-station/altona-north-05-2021/IMG_8769.jpg",
+      "/images/projects-and-study-station/altona-north-05-2021/IMG_8772.jpg",
+      "/images/projects-and-study-station/altona-north-05-2021/IMG_8773.jpg",
+      "/images/projects-and-study-station/altona-north-05-2021/IMG_8775.jpg",
+      "/images/projects-and-study-station/altona-north-05-2021/IMG_8776.jpg",
+      "/images/projects-and-study-station/altona-north-05-2021/IMG_8803.jpg",
+      "/images/projects-and-study-station/altona-north-05-2021/IMG_8826.jpg",
+      "/images/projects-and-study-station/altona-north-05-2021/IMG_8827.jpg",
+      "/images/projects-and-study-station/altona-north-05-2021/IMG_8828.jpg",
+      "/images/projects-and-study-station/altona-north-05-2021/IMG_8829.jpg",
+      "/images/projects-and-study-station/altona-north-05-2021/IMG_8836.jpg",
+      "/images/projects-and-study-station/altona-north-05-2021/IMG_8739.jpg"
     ]
   },
   {
-    "id": 20,
+    "id": 25,
     "title": "Tarneit",
-    "category": "study",
+    "category": "projects-and-study-station",
     "date": "2023-07-15",
     "images": [
-      "/images/work-and-study/tarneit-07-2023/IMG_4958.PNG",
-      "/images/work-and-study/tarneit-07-2023/IMG_4959.PNG"
+      "/images/projects-and-study-station/tarneit-07-2023/IMG_4958.PNG",
+      "/images/projects-and-study-station/tarneit-07-2023/IMG_4959.PNG"
+    ]
+  },
+  {
+    "id": 26,
+    "title": "kew",
+    "category": "projects-and-study-station",
+    "date": "2022-05-15",
+    "images": [
+      "/images/projects-and-study-station/IMG_3513.jpg",
+      "/images/projects-and-study-station/IMG_6966.jpg",
+      "/images/projects-and-study-station/IMG_6967.jpg",
+      "/images/projects-and-study-station/IMG_6968.jpg",
+      "/images/projects-and-study-station/IMG_7391.jpg",
+      "/images/projects-and-study-station/IMG_7393.jpg",
+      "/images/projects-and-study-station/IMG_7405.jpg",
+      "/images/projects-and-study-station/IMG_7503.jpg",
+      "/images/projects-and-study-station/IMG_7507.jpg",
+      "/images/projects-and-study-station/IMG_7509.jpg",
+      "/images/projects-and-study-station/IMG_7510.jpg"
     ]
   },
 {
-    "id": 21,
+    "id": 27,
     "title": "Springvale",
     "category": "bathroom",
     "date": "2022-08-15",
     "images": [
-      "/images/bathroom/springvale/springvale1.png"
+      "/images/bathroom/springvale/IMG_1930.jpg",
+      "/images/bathroom/springvale/IMG_1943.jpg",
+      "/images/bathroom/springvale/IMG_1991.jpg"
          ]
   }
 ]
