@@ -148,7 +148,7 @@
     "date": "2022-06-15",
     "images": [
       "/images/laundry/fraiser-rise-06-2022/IMG_5607.jpeg",
-      "/images/laundry/fraiser-rise-06-2022/IMG_7139.jpeg"
+      "/images/laundry/fraiser-rise-06-2022/IMG_7139.jpg"
     ]
   },
   {
@@ -157,7 +157,7 @@
     "category": "laundry",
     "date": "2021-07-15",
     "images": [
-      "/images/laundry/mckinnon-07-2021/IMG_8784.jpeg",
+      "/images/laundry/mckinnon-07-2021/IMG_8784.jpg",
       "/images/laundry/mckinnon-07-2021/IMG_8794.jpeg"
     ]
   },
@@ -167,7 +167,7 @@
     "category": "laundry",
     "date": "2023-09-15",
     "images": [
-      "/images/laundry/laundry-collection-09-2023/IMG_1946.jpg",
+      "/images/laundry/laundry-collection-09-2023/IMG_1546.jpg",
       "/images/laundry/laundry-collection-09-2023/IMG_1962.jpg",
       "/images/laundry/laundry-collection-09-2023/IMG_3940.jpg",
       "/images/laundry/laundry-collection-09-2023/IMG_5054.jpg",
@@ -183,8 +183,8 @@
     "category": "storage",
     "date": "2025-09-15",
     "images": [
-      "/images/storage/brighton-09-2025/IMG_2137.jpeg",
       "/images/storage/brighton-09-2025/IMG_2138.jpeg",
+      "/images/storage/brighton-09-2025/IMG_2137.jpeg",
       "/images/storage/brighton-09-2025/IMG_8299.jpeg"
     ]
   },
@@ -194,10 +194,10 @@
     "category": "storage",
     "date": "2024-05-15",
     "images": [
-      "/images/storage/greenvale-05-2024/IMG_9358.jpeg",
+      "/images/storage/greenvale-05-2024/IMG_9361.jpeg",
       "/images/storage/greenvale-05-2024/IMG_9359.jpeg",
       "/images/storage/greenvale-05-2024/IMG_9360.jpeg",
-      "/images/storage/greenvale-05-2024/IMG_9361.jpeg"
+      "/images/storage/greenvale-05-2024/IMG_9358.jpeg"
     ]
   },
   {
@@ -330,17 +330,22 @@
     "category": "projects-and-study-station",
     "date": "2022-05-15",
     "images": [
-      "/images/projects-and-study-station/IMG_3513.jpg",
-      "/images/projects-and-study-station/IMG_6966.jpg",
-      "/images/projects-and-study-station/IMG_6967.jpg",
-      "/images/projects-and-study-station/IMG_6968.jpg",
-      "/images/projects-and-study-station/IMG_7391.jpg",
-      "/images/projects-and-study-station/IMG_7393.jpg",
-      "/images/projects-and-study-station/IMG_7405.jpg",
-      "/images/projects-and-study-station/IMG_7503.jpg",
-      "/images/projects-and-study-station/IMG_7507.jpg",
-      "/images/projects-and-study-station/IMG_7509.jpg",
-      "/images/projects-and-study-station/IMG_7510.jpg"
+      "/images/projects-and-study-station/kew-05-2022/IMG_7511.jpg",
+      "/images/projects-and-study-station/kew-05-2022/IMG_6966.jpg",
+      "/images/projects-and-study-station/kew-05-2022/IMG_6967.jpg",
+      "/images/projects-and-study-station/kew-05-2022/IMG_6968.jpg",
+      "/images/projects-and-study-station/kew-05-2022/IMG_7503.jpg",
+      "/images/projects-and-study-station/kew-05-2022/IMG_7391.jpg",
+      "/images/projects-and-study-station/kew-05-2022/IMG_7393.jpg",
+      "/images/projects-and-study-station/kew-05-2022/IMG_7405.jpg",
+      "/images/projects-and-study-station/kew-05-2022/IMG_3513.jpg",
+      "/images/projects-and-study-station/kew-05-2022/IMG_7507.jpg",
+      "/images/projects-and-study-station/kew-05-2022/IMG_7509.jpg",
+      "/images/projects-and-study-station/kew-05-2022/IMG_7510.jpg",
+      "/images/projects-and-study-station/kew-05-2022/IMG_7512.jpg",
+      "/images/projects-and-study-station/kew-05-2022/IMG_7513.jpg",
+      "/images/projects-and-study-station/kew-05-2022/IMG_7516.jpg",
+      "/images/projects-and-study-station/kew-05-2022/IMG_7622.jpg"
     ]
   },
 {
