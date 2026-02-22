@@ -70,7 +70,7 @@ function Projects() {
     { id: 'all', label: 'All' },
     { id: 'kitchen-living', label: 'Kitchen & Living' },
     { id: 'bathroom', label: 'Bathroom' },
-    { id: 'laundry', label: 'Laudries' },
+    { id: 'laundry', label: 'Laundries' },
     { id: 'wardrobe', label: 'Wardrobes' },
     { id: 'study', label: 'Projects & Study Station' },
     { id: 'storage', label: 'Storage' },
