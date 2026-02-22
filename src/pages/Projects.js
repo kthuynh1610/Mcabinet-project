@@ -68,12 +68,11 @@ function Projects() {
   // Categories for filtering
   const categories = [
     { id: 'all', label: 'All' },
-    { id: 'kitchen', label: 'Kitchen' },
-    { id: 'living', label: 'Living area' },
+    { id: 'kitchen-living', label: 'Kitchen & Living' },
     { id: 'bathroom', label: 'Bathroom' },
     { id: 'laundry', label: 'Laudries' },
     { id: 'wardrobe', label: 'Wardrobes' },
-    { id: 'study', label: 'Custom Work & Study Station' },
+    { id: 'study', label: 'Projects & Study Station' },
     { id: 'storage', label: 'Storage' },
   ];
 
