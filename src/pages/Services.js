@@ -110,8 +110,8 @@ function Services() {
   const services = [
     {
       number: '01',
-      title: 'Kitchens',
-      description: 'Custom designer kitchens, renovations, and appliance integration',
+      title: 'Kitchen & Living',
+      description: 'Custom designer kitchens, living spaces, home offices, and entertainment units',
     },
     {
       number: '02',
@@ -130,11 +130,6 @@ function Services() {
     },
     {
       number: '05',
-      title: 'Living & Home Office',
-      description: 'Home offices and bespoke workstations',
-    },
-    {
-      number: '06',
       title: 'Outdoor & Specialty',
       description: 'BBQ and outdoor kitchens',
     },
@@ -296,13 +291,16 @@ function Services() {
         <Grid container spacing={4}>
           <Grid item xs={12} md={6}>
             <Typography variant="h4" sx={{ color: 'primary.main', mb: 2, fontWeight: 600 }}>
-              Kitchens
+              Kitchen & Living
             </Typography>
             <Typography variant="body1" sx={{ color: 'text.secondary', mb: 3, lineHeight: 1.8 }}>
               • Custom designer kitchens, renovations, and upgrades<br />
               • Appliance supply and integration<br />
               • Premium benchtops: Marble, Caesarstone, and other high-end surfaces<br />
-              • Functional and stylish layouts for modern living
+              • Functional and stylish layouts for modern living<br />
+              • Home offices and bespoke workstations<br />
+              • Entertainment units, shelving, and wall units<br />
+              • Innovative storage solutions for living spaces
             </Typography>
 
             <Typography variant="h4" sx={{ color: 'primary.main', mb: 2, fontWeight: 600 }}>
@@ -329,15 +327,6 @@ function Services() {
             <Typography variant="body1" sx={{ color: 'text.secondary', mb: 3, lineHeight: 1.8 }}>
               • Walk-in and built-in wardrobes<br />
               • Custom bedroom cabinetry designed for lifestyle and organisation
-            </Typography>
-
-            <Typography variant="h4" sx={{ color: 'primary.main', mb: 2, fontWeight: 600 }}>
-              Living & Home Office
-            </Typography>
-            <Typography variant="body1" sx={{ color: 'text.secondary', mb: 3, lineHeight: 1.8 }}>
-              • Home offices and bespoke workstations<br />
-              • Entertainment units, shelving, and wall units<br />
-              • Innovative storage solutions for living spaces
             </Typography>
 
             <Typography variant="h4" sx={{ color: 'primary.main', mb: 2, fontWeight: 600 }}>
